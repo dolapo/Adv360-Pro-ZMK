@@ -15,19 +15,21 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <175>;
         };
 
-        new_behavior: new_behavior {
+        lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&none>, <&none>;
+            label = "LAYER_TAP";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <175>;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
